@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Libre+Baskerville&family=Montserrat+Alternates:wght@300&family=Montserrat:wght@100;200;300&family=Nunito:wght@200&family=Pacifico&family=Play&family=Playfair+Display&family=Poppins:wght@100;300&family=Roboto&family=Shantell+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Libre+Baskerville&family=Lilita+One&family=Montserrat+Alternates:wght@300&family=Montserrat:wght@100;200;300&family=Nunito:wght@200&family=Pacifico&family=Play&family=Playfair+Display&family=Poppins:wght@100;300&family=Roboto&family=Shantell+Sans:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+li,
+a,
+button {
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(241, 237, 237);
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo {
+    cursor: pointer;
+    width: 51px;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgb(241, 237, 237);
+    color: black;
+    cursor: pointer;
+    border: none;
+}
+
+.drop {
+    position: relative;
+    left: 3px;
+}
+
+.container {
+    min-height: 87.5vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero {
+    background-image: url("bg.avif");
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+#hero .hero {
+    max-width: 1200px;
+    /* margin: 0 auto; */
+    padding: 0 100px;
+    justify-content: flex-start;
+}
+
+#hero h1 {
+    font-family: 'Lilita One', cursive;
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    font-weight: 800;
+    position: relative;
+    color: transparent;
+    animation: hero_animation1 .5s ease forwards;
+    animation-delay: 1.5s;
+}
+
+#hero h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: rgb(12, 9, 9);
+    animation: hero_animation 1s ease;
+    animation-delay: 1s;
+}
+
+@keyframes hero_animation {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes hero_animation1 {
+    100% {
+        color: rgb(238, 227, 227);
+    }
+
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.box1 {
+    height: 100vh;
+    width: 100%;
+    background-image: url("parallax.avif");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+    display: table;
+    background-attachment: fixed;
+}
+
+.box3 {
+    padding-bottom: 300px;
+    position: relative;
+    top: 180px;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 33.33%;
+    padding: 20px;
+}
+
+.box4 {
+    position: relative;
+    right: 180px;
+}
+
+.row1 {
+    display: flex;
+}
+
+.column1 {
+    flex: 33.33%;
+    padding: 5px;
+}
+
+.circle {
+    background: linear-gradient(to right, white, rgb(233, 183, 200), #c28a79);
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    position: relative;
+    left: 183px;
+}
+
+.info {
+    padding-bottom: 60px;
+}
+
+.skill-bar {
+    padding-bottom: 35px;
+}
+
+.skill-main .skill-bar .info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.skill-bar .info .percent {
+    font-weight: 300;
+}
+
+.skill-bar .bar {
+    width: 150%;
+    height: 15px;
+    background-color: #a19c9c;
+    border-radius: 25px;
+    margin-top: 5px;
+}
+
+.skill-bar .bar span {
+    width: 7%;
+    height: 3%;
+    position: absolute;
+    background-color: #723838;
+    border-radius: 25px;
+}
+
+.percent-size {
+    position: relative;
+    top: 13px;
+    left: 110px;
+}
+
+.skill-bar .bar .curricular {
+    width: 150%;
+    animation: curricular 3s;
+}
+
+@keyframes curricular {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 150%;
+    }
+}
+
+.skill-bar .bar .internship {
+    width: 140%;
+    animation: internship 3s;
+}
+
+@keyframes internship {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 140%;
+    }
+}
+
+.skill-bar .bar .circulation {
+    width: 130%;
+    animation: circulation 3s;
+}
+
+@keyframes circulation {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 130%;
+    }
+}
+
+.skill-bar .bar .workshop {
+    width: 120%;
+    animation: workshop 3s;
+}
+
+@keyframes workshop {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 120%;
+    }
+}
+
+.skill-bar .bar .genre {
+    width: 110%;
+    animation: genre 3s;
+}
+
+@keyframes genre {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 110%;
+    }
+}
+
+.price-row {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 25px;
+}
+
+.price-column {
+    background: linear-gradient(to bottom, magenta, white);
+    padding: 10% 15%;
+    border-radius: 10px;
+    color: whitesmoke;
+    text-align: center;
+    padding-bottom: 55%;
+}
+
+.price-column p {
+    font-size: 22px;
+}
+
+.price-column h3 {
+    font-size: 44px;
+    margin: 20px 0 40px;
+    font-weight: 500;
+}
+
+.price-column span {
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    bottom: 25px;
+    right: 5px;
+}
+
+#owner .circle1 {
+    background-color: transparent;
+    position: relative;
+    bottom: 120px;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border: 2px solid #723838;
+    left: 330px;
+
+}
+
+.form-heading {
+    font-family: 'Lilita One', cursive;
+    color: #723838;
+    margin-bottom: 753px;
+    left: 1155px;
+    position: absolute;
+    font-size: 57px;
+}
+
+form {
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    bottom: 115px;
+    right: 380px;
+}
+
+.form-input {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 2px solid #c07272;
+    /* color: #0a0808; */
+    color: #5a3434;
+    background: transparent;
+    font-size: 15px;
+}
+
+label {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: #5a3434;
+    cursor: text;
+    transition: 0.2s;
+}
+
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label {
+    top: -35px;
+    font-size: 14px;
+}
+
+.footer1 footer p{
+    align-content: center;
+    padding-left: 740px;
+    padding-top: 100px;
+    position: relative;
+    bottom: 45px;
+}
